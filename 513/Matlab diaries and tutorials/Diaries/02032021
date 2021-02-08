@@ -1,0 +1,83 @@
+D=diag([1 6])
+
+D =
+
+     1     0
+     0     6
+
+P=rand(2,2);
+A=P*D*inv(P);
+eig(A)
+
+ans =
+
+    1.0000
+    6.0000
+
+B=A'*A
+
+B =
+
+    1.0298   -3.7932
+   -3.7932   48.9323
+
+eig(B)
+
+ans =
+
+    0.7312
+   49.2308
+
+sqrt(eig(B))
+
+ans =
+
+    0.8551
+    7.0165
+
+norm(A)
+
+ans =
+
+    7.0165
+
+T=linspace(-pi,pi,200);
+CIR=[cos(T); sin(T)];
+size(CIR)
+
+ans =
+
+     2   200
+
+RAN=A*CIR;
+figure; plot(RAN(1,:),RAN(2,:),'.r')
+[Evec,Eval]=eig(B)
+
+Evec =
+
+   -0.9969   -0.0785
+   -0.0785    0.9969
+
+
+Eval =
+
+    0.7312         0
+         0   49.2308
+
+RAN1=A'*CIR;
+hold on;
+plot(RAN1(1,:),RAN1(2,:),'.b')
+B1=A*A';
+[Evec1,Eval1]=eig(B1)
+
+Evec1 =
+
+   -0.9224    0.3862
+    0.3862    0.9224
+
+
+Eval1 =
+
+    0.7312         0
+         0   49.2308
+
