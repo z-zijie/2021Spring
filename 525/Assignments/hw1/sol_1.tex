@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[]{amsthm}
+\usepackage[]{amssymb}
+\usepackage[]{amsmath}
+
+\title{ISyE/Math/CS/Stat 525 – Linear Optimization\\Spring 2021\\Homework 1}
+\author{ZIJIE ZHANG, JIACHENG DENG}
+\date\today
+
+\begin{document}
+\maketitle
+
+\section*{Exercise 1}
+	\begin{proof}
+		For every $x, y\in \mathbb{R}^n$ and every $\lambda \in [0,1]$
+		\begin{align*}
+			f(\lambda x + (1-\lambda) y)
+			&=\sum_{i=1}^m f_i(\lambda x + (1-\lambda) y)\\
+			&\leqslant \sum_{i=1}^m \lambda f_i(x) + (1-\lambda) f_i(y)\\
+			&=\lambda \sum_{i=1}^m f_i(x) + (1-\lambda)\sum_{i=1}^m f_i(y)\\
+			&=\lambda f(x) + (1-\lambda)f(y)
+		\end{align*}
+		$f$ is convex.
+	\end{proof}
+\section*{Exercise 8}
+	\begin{proof}
+		\begin{itemize}
+			\item[(a)]
+			\begin{align*}
+				\min\quad & c'(x^+ - x^-)+d'y\\
+				\mbox{s.t.}\quad
+				& A(x^+ - x^-)+By+z-b=0\\
+				& x^+ + x^- - y=0\\
+				& x^+, x^-, z\geqslant 0
+			\end{align*}
+			\item[(b)]
+				For every feasible solution to the original problem,
+				$$(x, y) = (x^+-x^-, y)$$
+				There exists a feasible solution to reformulation problem.
+		\end{itemize}
+	\end{proof}
+\section*{Exercise 9}
+	\begin{proof}
+		\begin{align*}
+			\min\quad & \left\Vert I-I^* \right\Vert_2\\
+			\mbox{s.t.}\quad
+			& I = A * P\\
+			\mbox{where}\quad
+			& A_{ij} = a_{ij}, P_j = p_j
+		\end{align*}
+	\end{proof}
+\section*{Exercise 11}
+	\begin{proof}
+
+	\end{proof}
+\section*{Exercise 12}
+	\begin{proof}
+
+	\end{proof}
+
+\end{document}

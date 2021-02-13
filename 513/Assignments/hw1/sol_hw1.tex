@@ -4,7 +4,7 @@
 \usepackage[]{amsthm}
 \usepackage[]{amssymb}
 
-\title{Homework 1}
+\title{SP21 COMPSCI 513 - Homework 1}
 \author{Zijie Zhang}
 \date\today
 
@@ -12,7 +12,24 @@
 \maketitle
 
 \begin{proof}
-    123
+    \indent
+    \begin{itemize}
+        \item[(a)]
+            By definition,
+            $$\left\Vert Q \right\Vert_2 = max\left\{\frac{\left\Vert Qv \right\Vert_2}{\left\Vert v \right\Vert_2}:v\not=0\right\} = 1$$
+            For $\left\Vert v \right\Vert_2 = 1$, $\left\Vert v \right\Vert_2^2 = 1$,
+            $$\left\Vert Q \right\Vert_2^2 = 1 = \left\Vert v \right\Vert_2^2 = \left\Vert Qv \right\Vert_2^2 = (Qv, Qv) = (Q'Qv, v)$$
+            $Q'Q$ is symmetric, by the schur decomposition, $Q'Q = SDS'$. Where $S$ is orthogonal and $D$ is diagonal.
+            $$1 = (SDS'v, v) = (DS'v, S'v)$$
+            Denote $w = S'v$, we have $(Dw, w) = 1$.
+            $$1 = \sum D_{ii} w_i^2 = \sum w_i^2$$
+            $$\sum \left(D_{ii} - 1\right)w_i^2 = 0$$
+            So, $D = I$.
+            1 is the only eigenvalue of $Q'Q$.
+        \item[(b)] 
+            From the proof of (a), $D = I$ means $$Q'Q = SS'$$
+            Here $S$ is orthogonal, $Q$ must also be orthogonal.
+    \end{itemize}
 \end{proof}
 
 \end{document}
