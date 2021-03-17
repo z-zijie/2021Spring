@@ -1,0 +1,53 @@
+Academic license - for non-commercial use only - expires 2021-04-26
+Using license file /home/zijie/gurobi.lic
+Changed value of parameter timelimit to 180.0
+   Prev: inf  Min: 0.0  Max: inf  Default: inf
+Changed value of parameter cuts to 0
+   Prev: -1  Min: -1  Max: 3  Default: -1
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 2305 rows, 2352 columns and 11045 nonzeros
+Model fingerprint: 0x72774eba
+Variable types: 0 continuous, 2352 integer (2304 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+01]
+  Objective range  [7e+00, 1e+08]
+  Bounds range     [1e+00, 5e+01]
+  RHS range        [1e+00, 5e+01]
+Presolve removed 47 rows and 49 columns
+Presolve time: 0.01s
+Presolved: 2258 rows, 2303 columns, 10998 nonzeros
+Variable types: 0 continuous, 2303 integer (2256 binary)
+Found heuristic solution: objective 7533.0000000
+
+Root relaxation: objective 1.655816e+03, 199 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1655.81560    0   61 7533.00000 1655.81560  78.0%     -    0s
+     0     0 1674.57447    0   77 7533.00000 1674.57447  77.8%     -    0s
+H    0     0                    1891.0000000 1674.57447  11.4%     -    0s
+     0     0 1725.44681    0   78 1891.00000 1725.44681  8.75%     -    0s
+     0     0 1725.44681    0   77 1891.00000 1725.44681  8.75%     -    0s
+     0     0 1725.44681    0   62 1891.00000 1725.44681  8.75%     -    0s
+     0     0 1736.44681    0   60 1891.00000 1736.44681  8.17%     -    0s
+     0     0 1736.44681    0   68 1891.00000 1736.44681  8.17%     -    0s
+     0     0 1736.44681    0   74 1891.00000 1736.44681  8.17%     -    0s
+     0     0 1736.44681    0   59 1891.00000 1736.44681  8.17%     -    0s
+H    0     0                    1776.0000000 1736.44681  2.23%     -    0s
+     0     0 1736.44681    0   62 1776.00000 1736.44681  2.23%     -    0s
+     0     0 1736.44681    0   66 1776.00000 1736.44681  2.23%     -    0s
+     0     0 1736.44681    0   65 1776.00000 1736.44681  2.23%     -    0s
+     0     2 1736.44681    0   63 1776.00000 1736.44681  2.23%     -    0s
+
+Cutting planes:
+  Learned: 9
+
+Explored 3197 nodes (20908 simplex iterations) in 0.57 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 3: 1776 1891 7533 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.776000000000e+03, best bound 1.776000000000e+03, gap 0.0000%

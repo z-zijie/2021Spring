@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[]{amsthm}
+\usepackage[]{amssymb}
+\usepackage[]{amsmath}
+
+\title{ISyE/Math/CS/Stat 525 – Linear Optimization\\Spring 2021\\Homework 2}
+\author{ZIJIE ZHANG, JIACHENG DENG}
+\date\today
+
+\begin{document}
+\maketitle
+\section*{Exercise 1}
+\begin{itemize}
+	\item[(a)]
+		$(1/2, 1, 1/2, 0, 0)$ is not a basic solution.\\
+		$(1, 2, 0, 0, 0)$ is a basic solution. It is degenerate basic feasible solution. Bases:$\{A_1, A_2, A_3\}, \{A_1, A_2, A_4\}, \{A_1, A_2, A_5\}$.\\
+		$(1, 0, 0, 1, 0)$ is not a basic solution.
+	\item[(b)]
+	By Theorem 2.3, $x^*$ is a vertex if and only if $x^*$ is a basic feasible solution.\\
+	$(1/2, 1, 1/2, 0, 0)$ is not a vertex.\\
+	$(1, 2, 0, 0, 0)$ is a vertex. $f(x) = x_3+x_4+x_5$.\\
+	$(1, 0, 0, 1, 0)$ is not a vertex.
+\end{itemize}
+\section*{Exercise 2}
+First of all, we prove that for any $0 \leqslant \lambda \leqslant 1$, $\lambda u + (1-\lambda)v \in P$, by definition, $u, v$ satisfies
+	$$a_i' u \geqslant b_i, i = 1, \cdots, m$$
+	$$a_i' v \geqslant b_i, i = 1, \cdots, m$$
+thus, $$a_i' (\lambda u + (1-\lambda)v) = \lambda a_i' u + (1-\lambda)a_i'v \geqslant b_i, i = 1, \cdots, m$$
+It means any elements in $L$ is in $P$.\\
+Next, we prove that, for any $0 \leqslant \lambda \leqslant 1$, $a_i' z = b_i, i=1,\cdots, n-1$. $u, v$ are distinct basic feasible solutions, so they satisfies
+	$$a_i' u = b_i, i = 1, \cdots, n-1$$
+	$$a_i' v = b_i, i = 1, \cdots, n-1$$
+then, $$a_i' (\lambda u + (1-\lambda)v) = \lambda a_i' u + (1-\lambda) a_i' v = b_i, i = 1, \cdots, n-1$$
+It means, $\{\lambda u +(1-\lambda) v: 0\leqslant \lambda \leqslant 1\}\subseteq \{z\in P:a_i' z=b_i, i = 1,\cdots, n-1\}$.\\
+Consider $A = [a_1' a_2' \cdots a_{n-1}']$, $A(z-v)=Az-Av=0$.$A$ is invertible, so $z=v$ for first $n-1$ elements. The same as $z$ and $u$. This means $z$ is the linear combination of $u$ and $v$.
+So, we proved $L = \{z \in P: a_i'z=b_i, i=1,\cdots,n-1\}$.
+\section*{Exercise 4}
+\begin{itemize}
+	\item[(a)] Consider the polyhedron, by Theorem 2.5. We can find a new polyhedron $Q1$ such that
+	$$Q = Q1 = \{(\lambda_1', \cdots, \lambda_m'):\sum_{i=1}^m \lambda_i A_i = y, \lambda_1, \cdots, \lambda_n \geqslant 0\}$$
+	The rest $\lambda$ are zeros. Then, we have constructed the coefficients $\lambda_1, \cdots, \lambda_n \geqslant 0$.
+	\item[(b)] By Corollary 2.6, The convex hull of a finite number of vectors is a polyhedron. Similar to the proof of (a), we need an extra $\lambda$ to make sure $\sum_{i=1}^n \lambda_i = 1$.
+\end{itemize}
+\end{document}

@@ -1,0 +1,113 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[]{amsthm}
+\usepackage[]{amssymb}
+\usepackage[]{amsmath}
+
+\title{SP21 COMPSCI 513 - Homework 3}
+\author{Zijie Zhang}
+\date\today
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item[(a)]
+        \begin{align*}
+            \left| \lambda I - A \right|
+                &= \left|\begin{array}{ccc} 
+                            \lambda - 2 & 2 \\ 
+                            -1          & \lambda - 1
+                        \end{array}\right|\\
+                &= (\lambda - 2)(\lambda - 1) + 2\\
+                &= \lambda^2 - 3\lambda + 4
+        \end{align*}
+        Let $\left| \lambda I - A \right| = 0$, we have
+            $$\lambda_1 = 1.5 - \frac{\sqrt{7}}{2}i$$
+            $$\lambda_2 = 1.5 + \frac{\sqrt{7}}{2}i$$
+        The spectrum is $\{1.5 - \frac{\sqrt{7}}{2}i, 1.5 + \frac{\sqrt{7}}{2}i\}$.
+        The spectral radius is $2$.
+    \item[(b)]
+        $$\left\Vert A \right\Vert_1 = \max_{1\leqslant i \leqslant n} \left\Vert a_i \right\Vert_1 = 3$$
+        $$\left\Vert A \right\Vert_2 = \sqrt{\rho(A'A)} $$
+        \begin{align*}
+            A'A = \begin{bmatrix}
+                5 &-3\\
+                -3 &5
+            \end{bmatrix}
+            \rho(A'A) = \max{\{2, 8\}} = 8 
+        \end{align*}
+        $$\left\Vert A \right\Vert_2 = \sqrt{\rho(A'A)} = 2\sqrt{2}$$
+        $$\left\Vert A \right\Vert_\infty = \left\Vert A' \right\Vert_1 = 4 $$
+    \item[(c)]
+        The eigenvectors of $AA'$ is $\begin{bmatrix}
+            0 &1\\
+            1 &0
+        \end{bmatrix}$
+        The eigenvectors of $AA'$ is $\begin{bmatrix}
+            -0.7071   &-0.7071\\
+            -0.7071   & 0.7071\\
+        \end{bmatrix}$
+        So, the left singular vectors is $\begin{bmatrix}
+            0 &1\\
+            1 &0
+        \end{bmatrix}$
+        the right singular vectors is $\begin{bmatrix}
+            -0.7071   &-0.7071\\
+            -0.7071   & 0.7071\\
+        \end{bmatrix}$
+        the singular values of $A$ is $\begin{bmatrix}
+            \sqrt{2}   &0\\
+            0   & 2\sqrt{2}\\
+        \end{bmatrix}$.
+    \item[(d)]
+        Consider $\Sigma_1 = \begin{bmatrix}
+            -\sqrt{2}   &0\\
+            0   & 2\sqrt{2}\\
+        \end{bmatrix}$. It is an orthogonal matrix. Let $$B = U \Sigma_1 V'$$
+        We have $$B = \begin{bmatrix}
+            -2 &2\\
+            1 & 1
+        \end{bmatrix}$$
+        Check it: $B'B = \begin{bmatrix}
+            5 &-3\\
+            -3 &5
+        \end{bmatrix} = A'A$,
+        $BB' = \begin{bmatrix}
+            8 &0\\
+            0 &2
+        \end{bmatrix} = AA'$
+    \item[(e)]
+    Find the schur decompositions of $A'A$.\\
+    $$A'A = \begin{bmatrix}
+            5 &-3\\
+            -3 &5
+        \end{bmatrix}$$
+    We know the eigenvectors of $A'A$ is $\begin{bmatrix}
+        2 &0\\
+        0 &8
+    \end{bmatrix}$
+    So, the 3 different decompositions are $$U_1 = \begin{bmatrix}
+            -\frac{\sqrt{2}}{2} &-\frac{\sqrt{2}}{2}\\
+            -\frac{\sqrt{2}}{2} &\frac{\sqrt{2}}{2}
+        \end{bmatrix},T_1 = \begin{bmatrix}
+            2 &0\\
+            0 &8
+        \end{bmatrix}$$
+        $$U_2 = \begin{bmatrix}
+            \frac{\sqrt{2}}{2} &-\frac{\sqrt{2}}{2}\\
+            -\frac{\sqrt{2}}{2} &-\frac{\sqrt{2}}{2}
+        \end{bmatrix},T_2 = \begin{bmatrix}
+            8 &0\\
+            0 &2
+        \end{bmatrix}$$
+        $$U_3 = \begin{bmatrix}
+            \frac{\sqrt{2}}{2} &\frac{\sqrt{2}}{2}\\
+            \frac{\sqrt{2}}{2} &-\frac{\sqrt{2}}{2}
+        \end{bmatrix},T_3 = \begin{bmatrix}
+            2 &0\\
+            0 &8
+        \end{bmatrix}$$
+\end{itemize}
+
+\end{document}

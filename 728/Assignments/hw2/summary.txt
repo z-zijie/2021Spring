@@ -1,0 +1,42 @@
+Instance: ftv47.atsp
+optimal objective value: 1.776000000000e+03
+the solution time: 1.114s
+the number of nodes explored in the branch-and-bound tree: 3411
+the root relaxation objective value: 1.655816e+03
+
+Instance: si175.atsp
+optimal objective value: 2.173000000000e+04
+the solution time: 300.0s
+the number of nodes explored in the branch-and-bound tree: 6541
+the root relaxation objective value: 2.025148e+04
+the ending optimality gap: 2.2365%
+
+
+
+[Most fractional]
+optimal objective value: 1.776000000000e+03
+the solution time: 180.0s
+the number of nodes explored in the branch-and-bound tree: 1013749
+the root relaxation objective value: 1.655816e+03
+the ending optimality gap: 0.6194%
+
+[Strong branching]
+optimal objective value: 1.776000000000e+03
+the solution time: 2.164s
+the number of nodes explored in the branch-and-bound tree: 2408
+the root relaxation objective value: 1.655816e+03
+
+[Turn off all cuts]
+optimal objective value: 1.776000000000e+03
+the solution time: 0.663s
+the number of nodes explored in the branch-and-bound tree: 3197
+the root relaxation objective value: 1.655816e+03
+
+
+
+
+
+[Summary]
+From the first test. We know that, the time it takes to solve the problem is related to the scale of the data. Exponential rise.
+From the second test. We can find that for the 'ftv47.atsp' instance. If I choose BFS(Breath First Search) to explore the entire tree, it will take a lot of time, because the search space for this problem is very huge. If I choose DFS(Deep First Search), with the help of heuristic algorithm it will quickly solve it.
+
